@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA calculator | by Ajith</title>
+    <link rel="icon" href="img/unnamed.png">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-gray-200">
+    <nav class="relative  mx-auto bg-white w-screen px-2 lg:px-16 py-1">
+        <!-- Flex container -->
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div class="pt-2 flex flex-row">
+                <div>
+                    <img src="img/unnamed.png" class="rounded-3xl h-15 w-14" alt="logo">
+                </div>
+                <div>
+                    <h3 class="font-bold text-base  text-[#14A0B6]">SGPA calculator</h3>
+                    <p class="text-[#14A0B6]">By Ajith</p>
+                </div>
+            </div>
+            <!-- Menu Items -->
+            <div class="hidden space-x-6 md:flex">
+                <a href="#" class="hover:text-darkGrayishBlue py-2 px-4"> 1st Sem</a>
+                <a href="#" class="hover:bg-bghover hover:rounded-3xl py-2 px-4 active:">2nd Sem</a>
+                <a href="#" class="hover:text-darkGrayishBlue py-2 px-4">3rd Sem</a>
+                <a href="#" class="hover:text-darkGrayishBlue py-2 px-4">4th Sem</a>
+            </div>
+            <!-- Button -->
+            <a href="#"
+                class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block">Get
+                Started</a>
+
+            <!-- Hamburger Icon -->
+            <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div id="menu"
+                class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                <a href="#">1st sem</a>
+                <a href="#">2nd sem</a>
+                <a href="#">3rd sem</a>
+                <a href="#">4th sem</a>
+            </div>
+        </div>
+    </nav>
+    <div class=" bg-bglightblue lg:max-h-screen md:h-2/4 rounded-2xl">
+        <div class="text-center py-12 md:py-14">
+            <h2 class="text-4xl font-bold mb-2">SGPA calculator</h2>
+            <p>Calculate Your SGPA by Entering Your Marks. <br>This is <b>SGPA calculator 2.0</b> (which is responsive),
+            </p>
+            <p>Next Sem you will be storing your marks in the database. </p>
+            <button class="bg-blue-500 py-2 px-5 m-5 text-white  rounded-3xl">Click Me !</button>
+        </div>
+
+
+    </div>
+    <section class="bg-gray-50 lg:-mt-10 lg:max-h-screen flex  items-center justify-center">
+        <!-- Login container -->
+        <div class="bg-white container mx-auto shadow-lg max-w-sm  rounded-xl md:max-w-3xl">
+            <div
+                class="flex flex-row px-5 py-3 space-x-11 md:space-x-44 font-semibold  text-base text-[#14A0B6] text-left">
+                <div class="bottom">Subject</div>
+                <div class="bottom1">Marks</div>
+                <div class="bottom2">Credit</div>
+                <div class="bottom3">Grade</div>
+            </div>
+
+            <form>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg">DBMS</label>
+                    <input type="number" value="0" id="dbms"
+                        class="border text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="3"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="dbms1"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg mr-2">JAVA</label>
+                    <input type="number" value="0" id="java"
+                        class="border text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="3"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="java1"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg mr-3">WEB</label>
+                    <input type="number" value="0" id="web"
+                        class="border text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="4"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="web1"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg mr-8">SE</label>
+                    <input type="number" value="0" id="se"
+                        class="border text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="4"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="se1"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg">OT/CS</label>
+                    <input type="number" value="0" id="ot"
+                        class="border text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="3"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="ot1"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg -mr-4">MAD/AI</label>
+                    <input type="number" value="0" id="mad"
+                        class="border  text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="3"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="mad1"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg -mr-7">DBMS lab</label>
+                    <input type="number" value="0" id="lab1"
+                        class="border text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="2"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="lab12"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg -mr-4">JAVA lab</label>
+                    <input type="number" value="0" id="lab2"
+                        class="border  text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="2"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="lab22"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class=" space-x-8 px-5 py-3  md:space-x-40">
+                    <label class="text-[#14A0B6] font-semibold text-lg -mr-3">WEB lab</label>
+                    <input type="number" value="0" id="lab3"
+                        class="border  text-center w-14 font-semibold text-lg outline-black" class="text-center"
+                        size="4">
+                    <input type="number" value="2"
+                        class="border text-center w-14 bg-gray-300 outline-none font-semibold text-lg" readonly>
+                    <input type="number" value="0" id="lab32"
+                        class="border text-center w-14 font-semibold text-lg outline-none">
+                </div>
+                <div class="text-center pb-5">
+                    <button class="bg-blue-500 py-2 px-5 m-5 text-white  rounded-3xl" id="calc"
+                        onclick="calculate()">Calculate</button>
+                    <div class="px-4">
+                        <label for="">SGPA is : </label>
+                        <input type="number" id="res" value="0"
+                            class="border  text-center w-14 lg:w-16 font-semibold text-lg outline-none"
+                            class="text-center" size="4">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <footer class="text-center p-3 lg:p-3 lg:mt-8">
+        <p> &copy; 2022</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
